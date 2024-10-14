@@ -21,11 +21,9 @@ function* generatePrimes(limit) {
   }
 }
 
-// Get user input for prime limit
 rl.question('Enter the limit for prime numbers: ', (input) => {
   const limit = parseInt(input);
   
-  // Validate input
   if (isNaN(limit) || limit <= 0) {
     console.error('Please enter a valid positive integer.');
     rl.close();
@@ -36,7 +34,7 @@ rl.question('Enter the limit for prime numbers: ', (input) => {
 
   console.log(`Prime numbers up to ${limit}:`);
   for (const prime of primeGenerator) {
-    console.log(prime); // Outputs prime numbers up to the limit
+    console.log(prime); 
   }
 
   rl.close();
